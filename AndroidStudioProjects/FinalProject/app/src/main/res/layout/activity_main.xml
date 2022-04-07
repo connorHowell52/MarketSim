@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_green_dark"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/userScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="38dp"
+        android:layout_weight="1"
+        android:text="Your Score: 0/21"
+        app:layout_constraintBottom_toTopOf="@+id/Deal"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/cardLayout1"
+        android:layout_width="380dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="220dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.384"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dealerLayout2"
+        android:layout_width="380dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="90dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/cardLayout2"
+        android:layout_width="380dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="90dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.387"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cardLayout1">
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/Deal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="20dp"
+        android:onClick="onDeal"
+        android:text="Deal"
+        app:backgroundTint="#8E2119"
+        app:layout_constraintBottom_toTopOf="@+id/Hit"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/Hit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="20dp"
+        android:onClick="onhit"
+        android:text="Hit"
+        app:backgroundTint="#8E2119"
+        app:layout_constraintBottom_toTopOf="@+id/Stay"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/Stay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="20dp"
+        android:onClick="onStay"
+        android:text="Stay"
+        app:backgroundTint="#8E2119"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/MoneyIG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="130dp"
+        android:layout_marginLeft="130dp"
+        android:layout_marginBottom="20dp"
+        android:text="Money:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Stay" />
+
+    <TextView
+        android:id="@+id/BetIG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginBottom="110dp"
+        android:text="Bet:"
+        app:layout_constraintBottom_toTopOf="@+id/MoneyIG"
+        app:layout_constraintStart_toEndOf="@+id/Stay" />
+
+    <TextView
+        android:id="@+id/Money_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="20dp"
+        android:text="500"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/MoneyIG" />
+
+    <EditText
+        android:id="@+id/bet_num"
+        android:layout_width="148dp"
+        android:layout_height="76dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="110dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@+id/MoneyIG"
+        app:layout_constraintStart_toEndOf="@+id/BetIG" />
+
+    <TextView
+        android:id="@+id/Result"
+        android:layout_width="211dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="90dp"
+        android:layout_marginRight="90dp"
+        android:layout_marginBottom="45dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+        android:textColor="#FDFBFB"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/Money_left"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.327"
+        app:layout_constraintStart_toEndOf="@+id/Hit"
+        app:layout_constraintTop_toBottomOf="@+id/bet_num"
+        app:layout_constraintVertical_bias="0.461" />
+
+    <LinearLayout
+        android:id="@+id/dealerLayout1"
+        android:layout_width="380dp"
+        android:layout_height="180dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/DealerScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="230dp"
+        android:layout_weight="1"
+        android:text="Dealer Score: 0/21"
+        app:layout_constraintBottom_toTopOf="@+id/userScore"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/cashOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="20dp"
+        android:onClick="onCashOut"
+        android:text="Cash Out"
+        app:backgroundTint="#8E2119"
+        app:iconTint="#8E2119"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Stay" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
